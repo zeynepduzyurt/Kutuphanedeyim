@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "942398863820",
+    "firebase_url": "https://kutuphanedeyim.firebaseio.com",
+    "project_id": "kutuphanedeyim",
+    "storage_bucket": "kutuphanedeyim.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942398863820:android:773ef94b082d34be",
+        "android_client_info": {
+          "package_name": "com.example.zeynep.kutuphanedeyimm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942398863820-gshmrlhiuj40s00ghjddb91si3ooov9r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zeynep.kutuphanedeyimm",
+            "certificate_hash": "c618c52c710223fb1d1db890d3bac8dc9ae57961"
+          }
+        },
+        {
+          "client_id": "942398863820-bb5acnlik16buqe63f2e3ha74dsg9fg8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zeynep.kutuphanedeyimm",
+            "certificate_hash": "3446b2b6825dd56594373b6dad976b80f2529d2e"
+          }
+        },
+        {
+          "client_id": "942398863820-9jtrscp8tl52pe5965skb1rsapakbj42.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zeynep.kutuphanedeyimm",
+            "certificate_hash": "b89c2b02721e57b8892619bbe768778968268805"
+          }
+        },
+        {
+          "client_id": "942398863820-9j2pr7hp6jucb6sn07pf1ablncgil837.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIiBuhjD5egzQhEhcqwcvwWjAGTbJ3ViY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942398863820-9j2pr7hp6jucb6sn07pf1ablncgil837.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

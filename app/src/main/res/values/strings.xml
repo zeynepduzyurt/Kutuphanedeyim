@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Kütüphanedeyim</string>
+    <string name="Email">Email</string>
+    <string name="Parola">Parola</string>
+    <string name="cikisyap">Çıkış Yap</string>
+    <string name="kullaniciSil">Kullanıcıyı Sil</string>
+    <string name="banner_ad_unit_id">ca-app-pub-9545523423977138/8630130577</string>
+    <string-array name="array_library">
+
+        <item name="ashk"> Adile Sultan Halk Kütüphanesi </item>
+        <item> Ahmet Hamdi Tanpınar Edebiyat Müze Kütüphanesi </item>
+        <item> Ahmet Kabaklı Kütüphanesi </item>
+        <item> Atatürk Kitaplığı</item>
+        <item> Beyazıt Devlet Kütüphanesi </item>
+        <item> İslam Arastırmaları Merkezi (İSAM) Kütüphanesi </item>
+        <item> İstanbul Modern Kütüphanesi </item>
+        <item> İstanbul Orhan Kemal İl Halk Kütüphanesi </item>
+        <item> İstanbul Sabahattin Zaim Üniversitesi Merkez Kütüphanesi </item>
+        <item> Kadın Eserleri Kütüphanesi </item>
+        <item> Metin And Kütüphanesi </item>
+        <item> Osman Akfırat Kütüphanesi </item>
+        <item> Rasim Özdenören Kütüphanesi </item>
+        <item> SALT Galata </item>
+        <item> Selimiye Halk Kütüphanesi  </item>
+        <item> Silivri Halk Kütüphanesi </item>
+        <item> Şehit Savcı Mehmet Selim Kiraz Kültür Merkezi Kütüphanesi </item>
+        <item> Şemsipaşa Halk Kütüphanesi </item>
+        <item> Tarih, Edebiyat ve Sanat Kütüphanesi </item>
+        <item> Turabibaba Kütüphanesi </item>
+    </string-array>
+</resources>

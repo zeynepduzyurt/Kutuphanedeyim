@@ -1,0 +1,66 @@
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent">
+
+
+
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.zeynep.kutuphanedeyimm.MapsActivity"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+         />
+
+    <EditText
+        android:id="@+id/TF_location"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:id="@+id/B_search"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:onClick="onClick"
+        android:text="Arama"
+        android:layout_alignBottom="@+id/B_kutuphane"
+        android:layout_toEndOf="@+id/B_to"
+        android:layout_marginStart="7dp" />
+
+
+
+    <Button
+        android:id="@+id/B_kutuphane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:onClick="onClick"
+        android:text="KUTUPHANE"
+        android:layout_below="@+id/TF_location"
+        android:layout_alignParentStart="true" />
+
+
+    <Button
+        android:id="@+id/B_to"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:onClick="onClick"
+        android:layout_alignBaseline="@+id/B_kutuphane"
+        android:layout_alignBottom="@+id/B_kutuphane"
+        android:layout_toEndOf="@+id/B_kutuphane" />
+
+</RelativeLayout>

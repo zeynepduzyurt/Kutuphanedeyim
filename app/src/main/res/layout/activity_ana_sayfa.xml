@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/anabackground"
+    tools:context="com.example.zeynep.kutuphanedeyimm.anaSayfa">
+
+    <Button
+        android:id="@+id/library"
+        android:layout_width="160dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/analibraries" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="105dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/anahesabim" />
+
+    <Button
+       android:id="@+id/haritalar"
+        android:layout_marginLeft="24dp"
+        android:layout_width="240dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="32dp"
+        android:background="@drawable/anafavlibrary_icon"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="150dp"
+        android:background="@drawable/anabildir"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:background="@drawable/plus"
+        android:layout_width="44dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="5dp"
+        />
+
+
+
+</LinearLayout>

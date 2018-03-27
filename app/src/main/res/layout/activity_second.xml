@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    tools:context="com.example.zeynep.kutuphanedeyimm.SecondActivity"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/searchcolor"
+        android:minHeight="45dp"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="#FFFFFF"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@+id/textview1"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:hint="ADRES"
+            android:textSize="8pt"
+            android:textColorHint="@color/mor"
+            android:textStyle="bold"
+            android:id="@+id/adres" android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button3"
+            android:layout_alignStart="@+id/imageView2"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentEnd="true" />
+
+
+        <Button
+            android:id="@+id/buttonfav"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="230dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/fav_dolu" />
+    </LinearLayout>
+
+
+    <TextView
+   android:textSize="8pt"
+        android:layout_marginLeft="13dp"
+        android:textStyle="italic"
+        android:id="@+id/textview1"
+        android:layout_width="353dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/button3"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/adres"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorPrimaryDark" />
+
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/cizgi" />
+
+
+
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/CustomRating"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="80dp" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_marginLeft="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cizgi"
+        />
+
+    <LinearLayout
+        android:layout_width="305dp"
+        android:layout_height="44dp"
+      android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:layout_weight="0.5"
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="2dp"
+            android:text="BURDAYIM!"
+            android:layout_marginLeft="50dp"
+            android:background="@color/searchcolor"
+            />
+
+        <Button
+            android:layout_weight="0.5"
+            android:id="@+id/button5"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:background="@color/searchcolor"
+            android:text="ÇIKIŞ YAPTIM" />
+
+    </LinearLayout>
+
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp">
+    <Button
+        android:background="@color/searchcolor"
+        android:id="@+id/kisigorr"
+        android:layout_marginLeft="50dp"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:text="Kaç kişi oldugunu gör" />
+    <TextView
+        android:id="@+id/kisisayisi"
+       android:textStyle="bold"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="70dp" />
+
+
+
+</LinearLayout>
+
+
+
+
+</LinearLayout>
