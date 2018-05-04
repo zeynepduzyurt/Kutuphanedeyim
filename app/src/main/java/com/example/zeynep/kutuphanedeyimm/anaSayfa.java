@@ -66,7 +66,7 @@ kutuphaneler.setOnClickListener(new View.OnClickListener() {
         hesap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-         startActivity(new Intent(anaSayfa.this,hesabim.class));
+         startActivity(new Intent(anaSayfa.this,KitapOnerisi.class));
             }
         });
 

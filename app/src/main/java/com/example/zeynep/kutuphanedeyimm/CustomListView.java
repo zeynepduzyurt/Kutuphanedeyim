@@ -32,8 +32,8 @@ public class CustomListView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_list_view);
 
-        toolbar=(Toolbar)findViewById(R.id.toolbarview);
-        setSupportActionBar(toolbar);
+       toolbar=(Toolbar)findViewById(R.id.toolbarview);
+       setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Kütüphane Arama");
 
         listView = (ListView) findViewById(R.id.listView);

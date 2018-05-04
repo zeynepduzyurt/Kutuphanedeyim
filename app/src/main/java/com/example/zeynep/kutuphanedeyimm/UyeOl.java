@@ -76,20 +76,5 @@ public class UyeOl extends AppCompatActivity {
         });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

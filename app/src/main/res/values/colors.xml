@@ -7,5 +7,7 @@
     <color name="colorAccent">#666666</color>
     <color name="searchcolor">#ab33cc</color>
     <color name="anarenk">#e6e6ed</color>
+    <color name="purple">#761e72</color>
+    <color name="gray">#c2c2c2</color>
     <color name="mor">#b200ca</color>
 </resources>

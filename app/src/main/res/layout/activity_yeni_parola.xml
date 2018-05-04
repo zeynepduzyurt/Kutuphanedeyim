@@ -8,16 +8,16 @@
     android:orientation="vertical"
     tools:context="com.example.zeynep.kutuphanedeyimm.YeniParolaActivity">
 
-
+ısı
     <EditText
         android:id="@+id/uyeEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/Email"
-        android:layout_marginTop="130dp"
-        android:inputType="textEmailAddress"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/Email"
+    android:layout_marginTop="130dp"
+    android:inputType="textEmailAddress"
 
-        />
+    />
 
 
     <Button
@@ -26,6 +26,6 @@
         android:layout_height="50dp"
         android:layout_marginLeft="80dp"
         android:background="@color/uyeButtonColor"
-        android:text="Yeni Parola\n Bağlantısını Gönder!"
+        android:text="Yeni Parola\n Bağlantnı Gönder!"
         android:textColor="#FFFF" />
 </LinearLayout>

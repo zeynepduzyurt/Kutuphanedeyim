@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button ogrencigirisi,kutuphanecigirisi;
+
 
 
 
@@ -19,21 +19,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ogrencigirisi=(Button)findViewById(R.id.ogrencigirisi);
-        kutuphanecigirisi=(Button)findViewById(R.id.kutuphanegiris);
+        Splash splash = new Splash();
+        splash.start();
 
 
 
-       ogrencigirisi.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent myintent= new Intent(MainActivity.this,OgrenciGirisi.class);
-               startActivity(myintent);
-           }
-       });
 
+    }
 
+    class Splash extends Thread {
+        @Override
+        public void run() {
+            try {
+                sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            Intent intent = new Intent(MainActivity.this, OgrenciGirisi.class);
 
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
     }
 
 
