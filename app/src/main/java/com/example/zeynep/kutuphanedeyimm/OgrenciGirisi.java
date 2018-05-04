@@ -29,16 +29,14 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class OgrenciGirisi extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
-    private EditText girisEmail,girisParola;
-    private Button girisButton,yeniSifreButton,uyeOlButton;
+    private EditText girisEmail, girisParola;
+    private Button girisButton, yeniSifreButton, uyeOlButton;
     private FirebaseAuth auth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
-    private static final int RC_SIGN_IN=1;
+    private static final int RC_SIGN_IN = 1;
     private SignInButton mGooglebtn;
     private GoogleApiClient mGoogleApiClient;
-    private static final String TAG="OGRENCI_GIRISI";
-
-
+    private static final String TAG = "OGRENCI_GIRISI";
 
 
     @Override
@@ -49,20 +47,20 @@ public class OgrenciGirisi extends AppCompatActivity implements GoogleApiClient.
 //FirebaseAuth sınıfının referans olduğu nesneleri kullanabilmek için getInstance methodunu kullanıyoruz.
 
 
-        girisEmail = (EditText)findViewById(R.id.epostagiris);
-        girisParola = (EditText)findViewById(R.id.sifregiris);
-        girisButton = (Button)findViewById(R.id.girisyap);
-        yeniSifreButton = (Button)findViewById(R.id.sifreunutma);
-        uyeOlButton = (Button)findViewById(R.id.hesabinyokmu);
-        mGooglebtn = (SignInButton)findViewById(R.id.sign_in_button);
+        girisEmail = (EditText) findViewById(R.id.epostagiris);
+        girisParola = (EditText) findViewById(R.id.sifregiris);
+        girisButton = (Button) findViewById(R.id.girisyap);
+        yeniSifreButton = (Button) findViewById(R.id.sifreunutma);
+        uyeOlButton = (Button) findViewById(R.id.hesabinyokmu);
+        mGooglebtn = (SignInButton) findViewById(R.id.sign_in_button);
 
         auth = FirebaseAuth.getInstance();
-        mAuthStateListener=new FirebaseAuth.AuthStateListener(){
+        mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-            if(firebaseAuth.getCurrentUser()!=null){
-                startActivity(new Intent(OgrenciGirisi.this,anaSayfa.class));
-            }
+                if (firebaseAuth.getCurrentUser() != null) {
+                    startActivity(new Intent(OgrenciGirisi.this, anaSayfa.class));
+                }
             }
         };
 
@@ -91,8 +89,8 @@ public class OgrenciGirisi extends AppCompatActivity implements GoogleApiClient.
 
 
         //Geçerli bir yetkilendirme olup olmadığını kontrol ediyoruz.
-        if(auth.getCurrentUser() != null){
-            startActivity(new Intent(OgrenciGirisi.this,anaSayfa.class));
+        if (auth.getCurrentUser() != null) {
+            startActivity(new Intent(OgrenciGirisi.this, anaSayfa.class));
         }
 
 
@@ -120,10 +118,9 @@ public class OgrenciGirisi extends AppCompatActivity implements GoogleApiClient.
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    startActivity(new Intent(OgrenciGirisi.this,anaSayfa.class));
-                                }
-                                else {
-                                    Log.e("Giriş Hatası",task.getException().getMessage());
+                                    startActivity(new Intent(OgrenciGirisi.this, anaSayfa.class));
+                                } else {
+                                    Log.e("Giriş Hatası", task.getException().getMessage());
                                 }
                             }
                         });
@@ -160,6 +157,7 @@ public class OgrenciGirisi extends AppCompatActivity implements GoogleApiClient.
         startActivityForResult(signInIntent, RC_SIGN_IN);
 
     }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -187,11 +185,11 @@ public class OgrenciGirisi extends AppCompatActivity implements GoogleApiClient.
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                                Log.d(TAG, "signInWithCredential:onComplete:" + task.isSuccessful());
+                        Log.d(TAG, "signInWithCredential:onComplete:" + task.isSuccessful());
 
 
                         if (!task.isSuccessful()) {
-                                         Log.w(TAG, "signInWithCredential", task.getException());
+                            Log.w(TAG, "signInWithCredential", task.getException());
                             Toast.makeText(OgrenciGirisi.this, "Yetkilendirme hatası.",
                                     Toast.LENGTH_SHORT).show();
                         } else {
@@ -199,7 +197,9 @@ public class OgrenciGirisi extends AppCompatActivity implements GoogleApiClient.
                             finish();
                         }
                     }
-                });}
+                });
+    }
+
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
         Log.d(TAG, "onConnectionFailed:" + connectionResult);

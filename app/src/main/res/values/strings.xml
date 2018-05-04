@@ -12,7 +12,7 @@
         <item> Ahmet Kabaklı Kütüphanesi </item>
         <item> Atatürk Kitaplığı</item>
         <item> Beyazıt Devlet Kütüphanesi </item>
-        <item> İslam Arastırmaları Merkezi (İSAM) Kütüphanesi </item>
+        <item> İSAM Kütüphanesi </item>
         <item> İstanbul Modern Kütüphanesi </item>
         <item> İstanbul Orhan Kemal İl Halk Kütüphanesi </item>
         <item> İstanbul Sabahattin Zaim Üniversitesi Merkez Kütüphanesi </item>
@@ -20,12 +20,5 @@
         <item> Metin And Kütüphanesi </item>
         <item> Osman Akfırat Kütüphanesi </item>
         <item> Rasim Özdenören Kütüphanesi </item>
-        <item> SALT Galata </item>
-        <item> Selimiye Halk Kütüphanesi  </item>
-        <item> Silivri Halk Kütüphanesi </item>
-        <item> Şehit Savcı Mehmet Selim Kiraz Kültür Merkezi Kütüphanesi </item>
-        <item> Şemsipaşa Halk Kütüphanesi </item>
-        <item> Tarih, Edebiyat ve Sanat Kütüphanesi </item>
-        <item> Turabibaba Kütüphanesi </item>
     </string-array>
 </resources>
