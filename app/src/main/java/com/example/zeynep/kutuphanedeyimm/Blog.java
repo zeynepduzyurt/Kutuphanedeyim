@@ -1,5 +1,5 @@
 package com.example.zeynep.kutuphanedeyimm;
-
+// Kitap Önerisi için açılan Blog sayfası
 /**
  * Created by Zeynep on 3.05.2018.
  */

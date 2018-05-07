@@ -1,5 +1,6 @@
 package com.example.zeynep.kutuphanedeyimm;
 
+// Kütüphane isimlerinin alındığı sınıf
 public class LibraryListClass {
 
     private String libraryName;

@@ -1,4 +1,5 @@
 package com.example.zeynep.kutuphanedeyimm;
+// En yakın kütüphane için harita işlemi
 
 import android.util.Log;
 
@@ -9,10 +10,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-
-/**
- * @author Priyanka
- */
 
 
 public class DownloadURL {

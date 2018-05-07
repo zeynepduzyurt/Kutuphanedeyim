@@ -1,4 +1,5 @@
 package com.example.zeynep.kutuphanedeyimm;
+// Giriş işlemlerinin yapılması
 
 import android.content.Intent;
 import android.nfc.Tag;
@@ -74,7 +75,7 @@ public class OgrenciGirisi extends AppCompatActivity implements GoogleApiClient.
                 .enableAutoManage(OgrenciGirisi.this, new GoogleApiClient.OnConnectionFailedListener() {
                     @Override
                     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-                        Toast.makeText(OgrenciGirisi.this, "hata aldın", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(OgrenciGirisi.this, "Hatalı giriş...", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)

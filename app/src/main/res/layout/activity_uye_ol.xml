@@ -9,24 +9,23 @@
     tools:context="com.example.zeynep.kutuphanedeyimm.UyeOl">
 
     <EditText
+        android:id="@+id/uyeEmail"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="100dp"
         android:hint="Email"
-        android:layout_marginLeft="5dp"
-        android:id="@+id/uyeEmail" />
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/uyeParola"
         android:layout_width="350dp"
-        android:layout_marginLeft="5dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
         android:ems="10"
         android:hint="@string/Parola"
-        android:inputType="textPassword"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="25dp" />
+        android:inputType="textPassword" />
 
 
     <Button

@@ -1,4 +1,5 @@
 package com.example.zeynep.kutuphanedeyimm;
+// Kitap önerisi yapılan sayfa
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,6 +21,7 @@ import com.squareup.picasso.Picasso;
 public class KitapOnerisi extends AppCompatActivity {
     private RecyclerView mBlogList;
     private DatabaseReference mDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

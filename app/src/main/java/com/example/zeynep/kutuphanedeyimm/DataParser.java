@@ -1,4 +1,5 @@
 package com.example.zeynep.kutuphanedeyimm;
+// En yakın kütüphane için harita işlemleri
 
 import java.util.HashMap;
 
@@ -11,9 +12,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Priyanka
- */
 
 public class DataParser {
 

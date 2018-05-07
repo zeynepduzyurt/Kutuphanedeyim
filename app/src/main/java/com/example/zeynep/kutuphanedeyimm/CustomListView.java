@@ -1,4 +1,5 @@
 package com.example.zeynep.kutuphanedeyimm;
+// Kütüphane listelerinin gösterimi
 
 import android.content.Intent;
 import android.graphics.Color;
