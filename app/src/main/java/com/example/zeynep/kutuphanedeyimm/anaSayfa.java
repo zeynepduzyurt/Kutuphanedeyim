@@ -21,23 +21,21 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class anaSayfa extends AppCompatActivity {
- Button kutuphaneler;
-    Button hesap,burdayim,favoriekle,harita;
+    Button kutuphaneler;
+    Button hesap, burdayim, favoriekle, harita;
     TextView favorilerim;
     InterstitialAd mInterstitialAd;
-
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ana_sayfa);
-        kutuphaneler=(Button)findViewById(R.id.library);
-        hesap=(Button)findViewById(R.id.button4);
-        burdayim=(Button)findViewById(R.id.button2);
-        harita=(Button)findViewById(R.id.haritalar);
-        mInterstitialAd=new InterstitialAd(this);
+        kutuphaneler = (Button) findViewById(R.id.library);
+        hesap = (Button) findViewById(R.id.button4);
+        burdayim = (Button) findViewById(R.id.button2);
+        harita = (Button) findViewById(R.id.haritalar);
+        mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-9545523423977138/8630130577");
         reklamiYukle();
         mInterstitialAd.setAdListener(new AdListener() {
@@ -55,28 +53,26 @@ public class anaSayfa extends AppCompatActivity {
         });
 
 
-kutuphaneler.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent myintent=new Intent(anaSayfa.this,CustomListView.class);
-        startActivity(myintent);
-    }
-});
+        kutuphaneler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myintent = new Intent(anaSayfa.this, CustomListView.class);
+                startActivity(myintent);
+            }
+        });
 
         hesap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-         startActivity(new Intent(anaSayfa.this,KitapOnerisi.class));
+                startActivity(new Intent(anaSayfa.this, KitapOnerisi.class));
             }
         });
-
-
 
 
         burdayim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent burdayim=new Intent(anaSayfa.this,CustomListView.class);
+                Intent burdayim = new Intent(anaSayfa.this, CustomListView.class);
                 startActivity(burdayim);
                 Toast.makeText(getApplicationContext(), "Lütfen bulunduğunuz kütüphaneyi seçin.", Toast.LENGTH_SHORT).show();
 
@@ -91,7 +87,8 @@ kutuphaneler.setOnClickListener(new View.OnClickListener() {
         });
 
     }
-    private void reklamiYukle(){
+
+    private void reklamiYukle() {
         AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build();
         mInterstitialAd.loadAd(adRequest);
     }

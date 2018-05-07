@@ -24,7 +24,7 @@ import java.util.List;
 public class CustomListView extends AppCompatActivity {
 
     ListView listView;
-    ArrayAdapter<String> mAdapter;
+    ArrayAdapter<String> listAdapter;
     Toolbar toolbar;
 
     @Override
@@ -32,40 +32,37 @@ public class CustomListView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_list_view);
 
-       toolbar=(Toolbar)findViewById(R.id.toolbarview);
-       setSupportActionBar(toolbar);
+   /*     toolbar = (Toolbar) findViewById(R.id.toolbarview);
+        setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Kütüphane Arama");
 
-        listView = (ListView) findViewById(R.id.listView);
-
-        ArrayList<String> arrayLibrary=new ArrayList<>();
+*/
+        ArrayList<String> arrayLibrary = new ArrayList<>();
         arrayLibrary.addAll(Arrays.asList(getResources().getStringArray(R.array.array_library)));
-        mAdapter = new ArrayAdapter<String>(CustomListView.this, android.R.layout.simple_list_item_1, arrayLibrary);
-        listView.setAdapter(mAdapter);
 
+        ArrayAdapter<LibraryListClass> listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, LibraryListClass.libraryList);
+        listView = (ListView) findViewById(R.id.listView);
+        listView.setAdapter(listAdapter);
 
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
+        AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> listView, View itemView, int position, long id) {
                 Intent intent = new Intent(CustomListView.this, SecondActivity.class);
-                intent.putExtra("Kütüphane Adı", listView.getItemAtPosition(position).toString());
+                intent.putExtra(SecondActivity.EXTRA_LIBRARYID, (int) id);
                 startActivity(intent);
             }
-        });
+        };
+        listView.setOnItemClickListener(onItemClickListener);
 
-    listView.setAdapter(mAdapter);
-}
-
+    }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.menu_search,menu);
-        MenuItem item=menu.findItem(R.id.menu_search);
-        SearchView searchView=(SearchView)item.getActionView();
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_search, menu);
+        MenuItem item = menu.findItem(R.id.menu_search);
+        SearchView searchView = (SearchView) item.getActionView();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -76,7 +73,7 @@ public class CustomListView extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                mAdapter.getFilter().filter(newText);
+                listAdapter.getFilter().filter(newText);
                 return false;
             }
         });
