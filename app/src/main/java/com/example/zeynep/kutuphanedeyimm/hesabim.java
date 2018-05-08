@@ -1,4 +1,5 @@
 package com.example.zeynep.kutuphanedeyimm;
+// Hesabım sayfası, çıkış yapma ve kullanıcı silme işlemleri
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -18,33 +19,34 @@ public class hesabim extends AppCompatActivity {
 
     private FirebaseAuth auth;
     private FirebaseAuth.AuthStateListener authStateListener;
-    private Button kullaniciSil,cikisYap;
+    private Button kullaniciSil, cikisYap;
     private TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hesabim);
 
-        kullaniciSil=(Button)findViewById(R.id.kullaniciSil);
-        textView=(TextView)findViewById(R.id.text);
-        cikisYap=(Button)findViewById(R.id.cikis_yap);
+        kullaniciSil = (Button) findViewById(R.id.kullaniciSil);
+        textView = (TextView) findViewById(R.id.text);
+        cikisYap = (Button) findViewById(R.id.cikis_yap);
 
-        auth=FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance();
 
-        authStateListener=new FirebaseAuth.AuthStateListener() {
+        authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user=firebaseAuth.getCurrentUser();
+                FirebaseUser user = firebaseAuth.getCurrentUser();
 
-                if(user==null) {
-                    startActivity(new Intent(hesabim.this,OgrenciGirisi.class));
+                if (user == null) {
+                    startActivity(new Intent(hesabim.this, OgrenciGirisi.class));
                     finish();
                 }
             }
         };
 
-        final FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
-        textView.setText("Merhaba! \n  "+user.getDisplayName());
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        textView.setText("Merhaba! \n  " + user.getDisplayName());
 
         kullaniciSil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,7 +73,7 @@ public class hesabim extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 auth.signOut();
-                startActivity(new Intent(hesabim.this,OgrenciGirisi.class));
+                startActivity(new Intent(hesabim.this, OgrenciGirisi.class));
                 finish();
             }
         });
@@ -88,7 +90,7 @@ public class hesabim extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        if(authStateListener!=null){
+        if (authStateListener != null) {
             auth.removeAuthStateListener(authStateListener);
         }
     }

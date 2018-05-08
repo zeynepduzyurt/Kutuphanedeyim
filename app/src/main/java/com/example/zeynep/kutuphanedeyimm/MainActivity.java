@@ -1,4 +1,5 @@
 package com.example.zeynep.kutuphanedeyimm;
+// Uygulamaya giriş yapıldığında 3 saniye boyunca tanıtım ekranının gösterilmesi
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,18 +12,12 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Splash splash = new Splash();
         splash.start();
-
-
 
 
     }
@@ -41,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
 
 
 }

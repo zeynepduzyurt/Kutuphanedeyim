@@ -27,7 +27,7 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Kütüphane bul..."
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
     <Button

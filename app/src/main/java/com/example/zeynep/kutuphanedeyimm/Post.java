@@ -1,4 +1,5 @@
 package com.example.zeynep.kutuphanedeyimm;
+// Kitap önerisinde fotoğraf ve açıklama yazarak post olarak gönderilmesi
 
 import android.app.ProgressDialog;
 import android.content.Intent;

@@ -1,4 +1,5 @@
 package com.example.zeynep.kutuphanedeyimm;
+// Şifre unutulması durumu ve yeni parola gönderme işlemleri
 
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;

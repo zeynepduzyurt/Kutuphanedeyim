@@ -1,5 +1,6 @@
 package com.example.zeynep.kutuphanedeyimm;
-//Kütüphane listeleri, kütüphanede bulunan kişi sayısı durumu
+/*Kütüphane listeleri, kütüphanede bulunan kişi sayısı durumu, kullanıcıların kütüphanede yer bildirimi yaparak
+doluluk oranının Firebase'e aktarılması */
 
 
 import android.app.Activity;
@@ -518,9 +519,7 @@ public class SecondActivity extends Activity {
                         });
                     }
                 });
-            }
-
-            else if (mToolbar.getTitle().toString().equalsIgnoreCase("İSAM Kütüphanesi")) {
+            } else if (mToolbar.getTitle().toString().equalsIgnoreCase("İSAM Kütüphanesi")) {
 
                 burdayim.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -597,9 +596,7 @@ public class SecondActivity extends Activity {
                         });
                     }
                 });
-            }
-
-             else if (mToolbar.getTitle().toString().equalsIgnoreCase("İstanbul Modern Kütüphanesi")) {
+            } else if (mToolbar.getTitle().toString().equalsIgnoreCase("İstanbul Modern Kütüphanesi")) {
 
                 burdayim.setOnClickListener(new View.OnClickListener() {
                     @Override

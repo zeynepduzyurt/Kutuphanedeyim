@@ -1,4 +1,5 @@
 package com.example.zeynep.kutuphanedeyimm;
+// Favori Kütüphane
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

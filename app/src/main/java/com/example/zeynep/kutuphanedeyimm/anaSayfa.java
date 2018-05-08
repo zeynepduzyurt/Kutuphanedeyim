@@ -1,5 +1,5 @@
 package com.example.zeynep.kutuphanedeyimm;
-
+// Kütüphaneler, Hesabım, En Yakın Kütüphane, Kitap Önerisi listesinin bulunduğu sayfa.
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -21,10 +21,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class anaSayfa extends AppCompatActivity {
-    Button kutuphaneler;
-    Button hesap, burdayim, favoriekle, harita;
-    TextView favorilerim;
-    InterstitialAd mInterstitialAd;
+    Button kutuphaneler, hesap, burdayim, favoriekle, harita, kitapOnerisi;
+  //  InterstitialAd mInterstitialAd;
 
 
     @Override
@@ -35,7 +33,9 @@ public class anaSayfa extends AppCompatActivity {
         hesap = (Button) findViewById(R.id.button4);
         burdayim = (Button) findViewById(R.id.button2);
         harita = (Button) findViewById(R.id.haritalar);
-        mInterstitialAd = new InterstitialAd(this);
+        kitapOnerisi = (Button) findViewById(R.id.kitapBtn);
+
+       /* mInterstitialAd = new InterstitialAd(this);        // Admob reklam eklentisi
         mInterstitialAd.setAdUnitId("ca-app-pub-9545523423977138/8630130577");
         reklamiYukle();
         mInterstitialAd.setAdListener(new AdListener() {
@@ -52,7 +52,7 @@ public class anaSayfa extends AppCompatActivity {
             }
         });
 
-
+*/
         kutuphaneler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,10 +64,16 @@ public class anaSayfa extends AppCompatActivity {
         hesap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(anaSayfa.this, KitapOnerisi.class));
+                startActivity(new Intent(anaSayfa.this, hesabim.class));
             }
         });
 
+        harita.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(anaSayfa.this, MapsActivity.class));
+            }
+        });
 
         burdayim.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,20 +85,21 @@ public class anaSayfa extends AppCompatActivity {
             }
         });
 
-        harita.setOnClickListener(new View.OnClickListener() {
+        kitapOnerisi.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(anaSayfa.this, MapsActivity.class));
+            public void onClick(View view) {
+                startActivity(new Intent(anaSayfa.this, KitapOnerisi.class));
             }
         });
 
+
     }
 
-    private void reklamiYukle() {
+  /*  private void reklamiYukle() {
         AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build();
         mInterstitialAd.loadAd(adRequest);
     }
-
+*/
 
 }
 
